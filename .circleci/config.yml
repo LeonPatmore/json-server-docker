@@ -5,6 +5,8 @@ workflows:
   build-push-docker:
     jobs:
       - docker/publish:
+          context:
+            - common
           image: leonpatmore/json-server
           tag: $CIRCLE_SHA1,latest
           update-description: true
