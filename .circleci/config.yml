@@ -6,7 +6,7 @@ workflows:
     jobs:
       - docker/publish:
           context:
-            - common
+            - Common
           image: leonpatmore/json-server
           tag: $CIRCLE_SHA1,latest
           update-description: true
